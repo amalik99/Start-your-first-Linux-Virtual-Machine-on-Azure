@@ -85,9 +85,10 @@ For production use, we have already created a custom VM image that includes pre-
 
 Run On Azure Bash<br/>
 
+```
 **wget https://github.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/blob/master/cloudinit1.txt**
 
-
+```
 
 <img src="images/githubscript.png"/><br/>
 
