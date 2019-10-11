@@ -94,10 +94,10 @@ Run On Azure Bash<br/>
 
 **Create a scale set** <br/>
 
-1. create a virtual machine scale set with az vmss create<br/>. 
+1. create a virtual machine scale set with az vmss create.<br/>
 
 ```
-az vmss create --resource-group YourResourceGroupName --name NameofYourScaleset --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.txt --admin-username azureuser --generate-ssh-keys 
+az vmss create --resource-group YourResourceGroupName --name NameofYourScaleset --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloudinit1.txt --admin-username azureuser --generate-ssh-keys 
 ```
 <img src="images/scalsetscreenshot.png"/><br/>
   
