@@ -1,3 +1,5 @@
+## Excerice 3:- Connect to Virtual Machine
+
 1. Select this sign **">_"** .<br/>
 
    <img src="images/azureclisign.png"/><br/>
