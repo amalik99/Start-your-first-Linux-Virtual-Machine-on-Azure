@@ -29,6 +29,3 @@
  
       <img src="images/validation.png"/><br/>
 
-8. For connecting to virtual machine copy the virtual machine **Public IP**. <br/>
-
-      <img src="images/ubuntufinal.png"/><br/>
