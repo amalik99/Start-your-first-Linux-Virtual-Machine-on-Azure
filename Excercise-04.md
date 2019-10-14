@@ -1,4 +1,4 @@
-### Exercise 3: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
+### Exercise 4: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
 
 A **Virtual Machine Scale Set** allows you to deploy and manage a set of identical, auto-scaling virtual machines. You can scale the number of VMs in the scale set manually, or define rules to autoscale based on resource usage such as CPU, memory demand, or network traffic. In this exercise, you deploy a virtual machine scale set in Azure. You learn how to:<br/>
 
