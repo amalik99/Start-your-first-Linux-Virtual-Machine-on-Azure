@@ -15,7 +15,7 @@
 
      <img src="images/vmname.png"/><br/>
 
-4. Under Administrator account, select **Password**, type your **User Name** or **Password**.<br/>
+4. Under Administrator account, select **Password**, type **User Name** or **Password**.<br/>
 
      <img src="images/adminp.png"/><br/>
 
