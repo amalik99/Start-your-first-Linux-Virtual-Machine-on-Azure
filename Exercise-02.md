@@ -11,7 +11,7 @@
 
     <img src="images/suscription.png"/><br/>
 
-3. Under Instance details, type **Name of VM** for the Virtual machine name,choose **Region** for your **Region** and choose image **"Ubuntu Server 18.04 LTS/Ubuntu Server 16.04 LTS**.<br/>
+3. Under Instance details, type **Name of VM** for the Virtual machine name,choose your **Region**, image **"Ubuntu Server 18.04 LTS/Ubuntu Server 16.04 LTS** and **Size**.<br/>
 
      <img src="images/vmname.png"/><br/>
 
