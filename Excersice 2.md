@@ -15,11 +15,12 @@
  **Get Public IP of VM using az cli command**
  
  Run this command for see **Public IP** of your virtual machine<br/>.
-  --resource-group :- Enter you **Resource Group** name.
+  -g :- Enter you **Resource Group** name.
+  -n :- Enter  your **Virtual Machine** name.
 
   
   ```
-  az vm show -d -g ODL-linux-100886 -n gfhgtnj --query publicIps -o tsv
+  az vm show -d -g ResourceGroup -n VMname --query publicIps -o tsv
   ```
       
 **SSH to VM using Public IP**
