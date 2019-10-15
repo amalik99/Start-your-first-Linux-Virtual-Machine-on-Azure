@@ -5,7 +5,6 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 - Use **cloud-init** to create an app to scale<br/>
 - Create a **Virtual Machine Scale Set**<br/>
-- Increase or decrease the number of instances in a scale set<br/>
 
 **3.1 Launch Cloud Shell**
 
