@@ -25,7 +25,7 @@ Run On Azure Cloud Shell<br/>
 wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/cloud-init.yaml
 ```
 
-<img src="images/wgetp.png "/><br/>
+   <img src="images/wgetp.png "/><br/>
 
 
 **3.3 Create a scale set** <br/>
@@ -55,7 +55,7 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
 az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name <loadBalancerFrontEndip>  --frontend-port 80  --protocol tcp
   ```
   
-  <img src="images/loadbalncer.png "/><br/>
+   <img src="images/loadbalncer.png "/><br/>
    
   
 3. To view a list of VMs running in your scale set, use **az vmss list-instances** command.<br/>
@@ -75,7 +75,6 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
            - name :- Your **Scale Set** name.<br/>
   ```
   az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
-    
   ``` 
    
    <img src="images/publicipdisplay.png"/><br/
@@ -83,7 +82,7 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
    
 5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
-     <img src="images/output.png"/><br/>
+    <img src="images/output.png"/><br/>
      
      
 --------------------------------------------------------------------
