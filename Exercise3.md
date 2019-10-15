@@ -18,7 +18,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **3.2 Create an app to scale** <br/>
 
-**3.2.1** We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You             can download that custom file using below command:-
+**3.2.1**  We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You              can download that custom file using below command:-
 
 Run On Azure Cloud Shell<br/>
 ```
