@@ -8,15 +8,15 @@
 
    <img src="images/ubuntunew.png"/><br/>
 
-2. In the Basics tab, under Project details, make sure the correct **Subscription** is selected and then choose your **Resource group**.<br/>
+2. In the basics tab under **Project details**, make sure the correct **Subscription** is selected and then choose your **Resource       group**.<br/>
 
     <img src="images/suscription.png"/><br/>
 
-3. Under Instance details, type **Name of VM** for Virtual machine name, choose your **Region**, image **Ubuntu Server 18.04 LTS/Ubuntu Server 16.04 LTS** and **Size**.<br/>
+3. Under **Instance details**, type **Virtual Machine Name** , choose your **Region**, select **Ubuntu Server 18.04 LTS or Ubuntu Server   16.04 LTS** image and select **Size** from any of them "Standard_DS2_v2", "Standard_DS1_v2", "Standard_B1ls1", "Standard_B1s",  "Standard_B1ms", "Standard_B2s", "Standard_B2ms", "Standard_B4ms", "Standard_B8ms", "Standard_E16-4s_v3", "Standard_E2s_v3",  "Standard_E4-2s_v3", "Standard_E4s_v3", "Standard_E8-2s_v3", "Standard_E8-4s_v3", "E16-4s_v3", "E16-8s_v3" .<br/>
 
      <img src="images/vmname.png"/><br/>
 
-4. Under Administrator account, select **Password**, type **User Name** and **Password**.<br/>
+4. Under **Administrator account** select **Password** for authentication type. Provide **User Name** and **Password**.<br/>
 
      <img src="images/adminp.png"/><br/>
 
@@ -26,7 +26,7 @@
 
 6. Leave the remaining options defaults and then select the **Review + create** button at the bottom of the page.<br/>
 
-7. On the Create a virtual machine page, you can see the details about the VM you are about to create. When you are ready, select        **Create**.<br/>
+7. On the Create a **Virtual Machine Page**, you can see the details about the VM you are about to create. When you are ready, select        **Create**.<br/>
  
       <img src="images/validation.png"/><br>
       
