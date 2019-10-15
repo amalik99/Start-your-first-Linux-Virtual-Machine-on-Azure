@@ -9,16 +9,16 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **3.1 Launch Cloud Shell**
 
-3.1.1 Select the **Cloud Shell** icon from the upper right corner of the Azure Portal. .<br/>
+1. Select the **Cloud Shell** icon from the upper right corner of the Azure Portal. .<br/>
 
    <img src="images/azureclisign.png"/><br/>
 
-3.1.2 Select **BASH** from drop down in cloud shell window.<br/>
+2. Select **BASH** from drop down in cloud shell window.<br/>
 
 
 **3.2 Create an app to scale** <br/>
 
-**3.2.1**  We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You              can download that custom file using below command:-
+1. We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You              can download that custom file using below command:-
 
 Run On Azure Cloud Shell<br/>
 ```
@@ -30,7 +30,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 
 **3.3 Create a scale set** <br/>
 
-**3.3.1**  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load                    balancer, Loadbalancing rules, Backend pools etc.. 
+1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load                    balancer, Loadbalancing rules, Backend pools etc.. 
            Please provide the following values while running the below command :
              - resource-group :- Enter your **Resource Group** name.
              - name :- Enter **Scale Set** name.
@@ -43,7 +43,7 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
    <img src="images/vmss.png "/><br/>   
 
   
- **3.3.2**  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Navigate to your resource              group and provide the values for Load balancer name, Backend pool name and Front-end Ip in the below command. 
+ 2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Navigate to your resource              group and provide the values for Load balancer name, Backend pool name and Front-end Ip in the below command. 
           - resource-group :- Enter your **Resource Group** name.
      
  ```
@@ -53,7 +53,7 @@ az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalance
   <img src="images/loadbalncer.png "/><br/>
    
   
-**3.3.3** To view a list of VMs running in your scale set, use az vmss list-instances as follows:
+3. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
             - resource-group :- Enter your **Resource Group** name.
             - name :- Your **Scale Set** name.
   ```
@@ -63,7 +63,7 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
    <img src="images/instance.png"/><br/>
    
    
-**3.3.4** To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show**.
+4. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show**.
           - resource-group :- Enter your **Resource Group** name.
            - name :- Your **Scale Set** name.
   ```
@@ -74,7 +74,7 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
    <img src="images/publicipdisplay.png"/><br/
    
    
-**3.3.5** Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
+5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
      <img src="images/output.png"/><br/>
      
