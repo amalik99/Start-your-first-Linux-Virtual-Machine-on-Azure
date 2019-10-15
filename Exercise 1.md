@@ -1,4 +1,4 @@
-### Exercise 2: Create a Linux virtual machine in the Azure portal
+### Exercise 1: Create a Linux virtual machine in the Azure portal
 
 
 **Create virtual machine**
