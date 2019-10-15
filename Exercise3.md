@@ -14,14 +14,13 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 2. Select **BASH** from drop down in cloud shell window.<br/>
 
-3. Used your existing bash storage account which we provisioned in **Exercise 2**.
+3. Use your existing bash storage account which we provisioned in **Exercise 2**.
 
 
-**3.2 Create an app to scale** <br/>
+**3.2 Create an App to Scale** <br/>
 
-1. We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You              can download that custom file using below command:- <br/>
+1. We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. Copy the below command and paste in cloud shell for downloading the custom file:<br/>
 
-Run On Azure Cloud Shell<br/>
 ```
 wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/cloud-init.yaml
 ```
@@ -29,13 +28,13 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
    <img src="images/wgetp.png "/><br/>
 
 
-**3.3 Create a scale set** <br/>
+**3.3 Create a Scale Set** <br/>
 
-1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load                     balancer, Loadbalancing rules, Backend pools etc.. <br/>
+1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy required resorces such as a         Pulic IP, Loadbalancer, Loadbalancing rules, Backend Pools, etc. <br/>
       - Please provide the following values while running the below command :<br/>
          - resource-group :- Enter your **Resource Group** name.
          - name :- Enter **Scale Set** name.
-         - admin-username :- **azureuser**.
+         - admin-username :- Enter **Admin User** name.
 
 ```
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
@@ -44,13 +43,13 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
    <img src="images/vmss.png "/><br/>   
 
   
- 2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Navigate to your resource              group and provide the values for Load balancer name, Backend pool name and Front-end Ip in the below command. <br/>
-      - Please provide the following values while running the below command :<br/>
+ 2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
+      - Please navigate to your resorce group and provide the following values while running the below command :<br/>
          - resource-group   :- Enter your **Resource Group** name.
-         - name             :- Enter **Load Balancer New Rule**  name.
+         - name             :- Enter name for **Load Balancer Rule**.
          - lb-name          :- Enter your **Load Balancer** name.
          - backend-pool     :- Enter your **Backend Pool** name.
-         - frontend-ip-name :- Enter your **Frontend IP** name. 
+         - frontend-ip-name :- Enter your **Frontend IP ** name. 
      
  ```
 az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name <loadBalancerFrontEndip>  --frontend-port 80  --protocol tcp
