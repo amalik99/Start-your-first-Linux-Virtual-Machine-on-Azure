@@ -1,4 +1,4 @@
-## Excerice 3:- Connect to Virtual Machine
+## Excerice 2:- Connect to Virtual Machine
 
 1. Select this sign **">_"** .<br/>
 
