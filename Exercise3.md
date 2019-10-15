@@ -1,5 +1,6 @@
 Exercise 3: Deploy VM Scale Set
 -------------------------------
+
 A **Virtual Machine Scale Set** allows you to deploy and manage a set of identical, auto-scaling virtual machines. You can scale the number of VMs in the scale set manually, or define rules to autoscale based on resource usage such as CPU, memory demand, or network traffic. In this exercise, you deploy a virtual machine scale set in Azure. You learn how to:<br/>
 
 - Use **cloud-init** to create an app to scale<br/>
@@ -8,16 +9,16 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **Launch Cloud Shell**
 
-1. Select the Cloud Shell from the upper right corner of the Azure Portal. .<br/>
+1. Select the **Cloud Shell** icon from the upper right corner of the Azure Portal. .<br/>
 
    <img src="images/azureclisign.png"/><br/>
 
-2. Select **BASH** in cloud shell window.<br/>
+2. Select **BASH** from drop down in cloud shell window.<br/>
 
 
 **Create an app to scale** <br/>
 
- We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application .You can download that custom file using below command:-
+We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You can download that custom file using below command:-
 
 Run On Azure Cloud Shell<br/>
 ```
@@ -29,7 +30,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 
 **Create a scale set** <br/>
 
-1. create a virtual machine scale set with **az vmss create**. 
+1. Create a virtual machine scale set with **az vmss create**. 
      - resource-group :- Enter your **Resource Group** name.
      - name :- Enter **Scale Set** name.
      - admin-username :- Enter **Admin User** name.
