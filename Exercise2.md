@@ -11,15 +11,15 @@ Exercise 2: Work with CloudShell
 
 3. Select **Show Advance Setting**.<br/>
 
-4. Create a storage for Bash, provide unique **Storage Account** Name and **File share** name and then click on **Create Storage**.<br/>
+4. Create a storage accounr for Bash, provide unique name for **Storage Account** and **File share** and then click on **Create Storage**.<br/>
 
    <img src="images/bashst.png"/><br/>
  
  **2.2 Get Public IP of VM using az cli**
  
  Run following command to get **Public IP** of your virtual machine.<br/>
-  - -g :- Enter you **Resource Group** name.<br/>
-  - -n :- Enter  your **Virtual Machine** name.<br/>
+   - g :- Enter you **Resource Group** name.<br/>
+   - n :- Enter  your **Virtual Machine** name.<br/>
 
   
   ```
@@ -29,7 +29,7 @@ Exercise 2: Work with CloudShell
 **2.3 SSH to VM using Public IP**
 
 1. Run below command to take **SSH** of your virtual machine.
-   X.X.X.X :- Enter your **Public IP**
+    - x.x.x.x :- Replace this with your virtual machine **Public IP**.
 
   ```
     ssh azureuser@x.x.x.x
