@@ -1,7 +1,7 @@
-### Exercise 1: Create a Linux virtual machine in the Azure portal
+### Exercise 1: Create your first Linux VM
 
 
-**Create virtual machine**
+**Create Ubuntu VM using Portal**
 
 1. Choose **Create a resource** in the upper left corner of the Azure portal and select **Ubuntu Server 18.04 LTS**.<br/>
 
@@ -27,5 +27,8 @@
 
 7. On the Create a virtual machine page, you can see the details about the VM you are about to create. When you are ready, select        **Create**.<br/>
  
-      <img src="images/validation.png"/><br/>
+      <img src="images/validation.png"/><br
+      
+ 8. After sometime you can see that your virtual machine successfully deployed.  
+      
 
