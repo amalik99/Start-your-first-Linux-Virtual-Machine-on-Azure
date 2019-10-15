@@ -31,10 +31,10 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 **3.3 Create a scale set** <br/>
 
 1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load                     balancer, Loadbalancing rules, Backend pools etc.. 
-       Please provide the following values while running the below command :
-         - resource-group :- Enter your **Resource Group** name.
-         - name :- Enter **Scale Set** name.
-         - admin-username :- **azureuser**.
+       Please provide the following values while running the below command :<br/>
+         - resource-group :- Enter your **Resource Group** name.<br/>
+         - name :- Enter **Scale Set** name.<br/>
+         - admin-username :- **azureuser**.<br/>
 
 ```
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
@@ -44,12 +44,12 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
 
   
  2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Navigate to your resource              group and provide the values for Load balancer name, Backend pool name and Front-end Ip in the below command. 
-       Please provide the following values while running the below command :
-         - resource-group   :- Enter your **Resource Group** name.
-         - name             :- Enter **Load Balancer New Rule**  name.
-         - lb-name          :- Enter your "Load Balancer" name.
-         - backend-pool     :- Enter your **Backend Pool** name.
-         - frontend-ip-name :- Enter your **Frontend IP" name.
+       Please provide the following values while running the below command :<br/>
+         - resource-group   :- Enter your **Resource Group** name.<br/>
+         - name             :- Enter **Load Balancer New Rule**  name.<br/>
+         - lb-name          :- Enter your **Load Balancer** name.<br/><br/>
+         - backend-pool     :- Enter your **Backend Pool** name.<br/>
+         - frontend-ip-name :- Enter your **Frontend IP** name. <br/>
      
  ```
 az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name <loadBalancerFrontEndip>  --frontend-port 80  --protocol tcp
@@ -58,9 +58,10 @@ az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalance
   <img src="images/loadbalncer.png "/><br/>
    
   
-3. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
-            - resource-group :- Enter your **Resource Group** name.
-            - name :- Your **Scale Set** name.
+3. To view a list of VMs running in your scale set, use **az vmss list-instances** command.
+      Please provide the following values while running the below command :<br/>
+         - resource-group :- Enter your **Resource Group** name.<br/>
+         - name :- Your **Scale Set** name.<br/>
   ```
 az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --output table 
   ```
@@ -68,9 +69,10 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
    <img src="images/instance.png"/><br/>
    
    
-4. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show**.
-          - resource-group :- Enter your **Resource Group** name.
-           - name :- Your **Scale Set** name.
+4. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.
+      Please provide the following values while running the below command :<br/>
+          - resource-group :- Enter your **Resource Group** name.<br/>
+           - name :- Your **Scale Set** name.<br/>
   ```
   az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
     
