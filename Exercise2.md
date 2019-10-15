@@ -1,4 +1,5 @@
-## Exercise 2:- Work with CloudShell
+Exercise 2: Work with CloudShell
+----------------------------------
 
 1. Select the **Cloud Shell** from the upper right corner of the Azure Portal. 
 
@@ -8,13 +9,13 @@
 
 3. Select **Show Advance Setting**.<br/>
 
-4. Create a storage for Bash give uniqe **Storage Name** and **File share** name then click on **Create Storage**.<br/>
+4. Create a storage for Bash, provide unique **Storage Account** Name and **File share** name and then click on **Create Storage**.<br/>
 
    <img src="images/bashst.png"/><br/>
  
- **Get Public IP of VM using az cli command**
+ **Get Public IP of VM using az cli**
  
- Run this command for see **Public IP** of your virtual machine.<br/>
+ Run following command to get **Public IP** of your virtual machine.<br/>
   - -g :- Enter you **Resource Group** name.<br/>
   - -n :- Enter  your **Virtual Machine** name.<br/>
 
