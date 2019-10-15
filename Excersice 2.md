@@ -35,11 +35,6 @@ Run below command to take **SSH** of your virtual machine.
    
 **Perform basic operation inside VM**
 
-Run some basic commands  :- <br/>
-  - ifconfig :- It is used to view and change the configuration of the network interfaces on your system.<br/>
-  
-  - uname -v :- It is prints the name, version and other details about the current machine and the operating system running on it.<br/>
- 
   <img src="images/task.png"/><br/>
   
   
