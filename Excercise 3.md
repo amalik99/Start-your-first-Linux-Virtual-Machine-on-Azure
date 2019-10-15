@@ -24,7 +24,7 @@ Run On Azure Cloud Shell<br/>
 wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/cloud-init.yaml
 ```
 
-<img src="images/githubscript.png"/><br/>
+<img src="images/wgetp.png"/><br/>
 
 
 **Create a scale set** <br/>
