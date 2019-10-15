@@ -16,10 +16,10 @@
  
  Run this command for see **Public IP** of your virtual machine<br/>.
   --resource-group :- Enter you **Resource Group** name.
-  --name :- Enter your **VIrtual Machine** name.
+
   
   ```
-  az network public-ip show --resource-group myResourceGroupScaleSet --name linuxvm  --query [ipAddress]  --output tsv
+  az vm show -d -g ODL-linux-100886 -n gfhgtnj --query publicIps -o tsv
   ```
       
 **SSH to VM using Public IP**
