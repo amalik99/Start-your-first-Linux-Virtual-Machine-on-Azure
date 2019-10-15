@@ -45,9 +45,11 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
   
  2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Navigate to your resource              group and provide the values for Load balancer name, Backend pool name and Front-end Ip in the below command. 
        Please provide the following values while running the below command :
-         - resource-group :- Enter your **Resource Group** name.
-         - name           :- Enter **Load Balancer New Rule**  name.
-         - lb-nme         :- Enter your "Load Balancer" name.
+         - resource-group   :- Enter your **Resource Group** name.
+         - name             :- Enter **Load Balancer New Rule**  name.
+         - lb-name          :- Enter your "Load Balancer" name.
+         - backend-pool     :- Enter your **Backend Pool** name.
+         - frontend-ip-name :- Enter your **Frontend IP" name.
      
  ```
 az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name <loadBalancerFrontEndip>  --frontend-port 80  --protocol tcp
