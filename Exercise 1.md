@@ -30,5 +30,7 @@
       <img src="images/validation.png"/><br
       
  8. After sometime you can see that your virtual machine successfully deployed.  
+ 
+     <img src="images/overview.png"/><br
       
 
