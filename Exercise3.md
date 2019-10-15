@@ -32,6 +32,9 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 
 1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy required resorces such as a         Pulic IP, Loadbalancer, Loadbalancing rules, Backend Pools, etc. <br/>
       - Please provide the following values while running the below command :<br/>
+        
+     <img src="images/LBname.png"/><br/>
+   
          - resource-group :- Enter your **Resource Group** name.
          - name :- Enter **Scale Set** name.
          - admin-username :- Enter **Admin User** name.
@@ -45,14 +48,15 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
   
  2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
       - Please navigate to your resorce group and provide the following values while running the below command :<br/>
+      
          - resource-group   :- Enter your **Resource Group** name.
          - name             :- Enter name for **Load Balancer Rule**.
          - lb-name          :- Enter your **Load Balancer** name.
          - backend-pool     :- Enter your **Backend Pool** name.
-         - frontend-ip-name :- Enter your **Frontend IP ** name. 
+          
      
  ```
-az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name <loadBalancerFrontEndip>  --frontend-port 80  --protocol tcp
+az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd --frontend-port 80  --protocol tcp
   ```
   
    <img src="images/loadbalncer.png "/><br/>
