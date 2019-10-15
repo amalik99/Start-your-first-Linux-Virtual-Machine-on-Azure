@@ -35,7 +35,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
      --admin-username :- Enter **Admin User** name.
 
 ```
-az vmss create --resource-group ODL-Linux-XXXX --name ScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
+az vmss create --resource-group ODL-linux-XXXX --name ScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
 ```
 
    <img src="images/vmss.png "/><br/>   
@@ -44,7 +44,7 @@ az vmss create --resource-group ODL-Linux-XXXX --name ScaleSetname --image Ubunt
   2. To allow traffic to reach the web app, create a rule with **az network lb rule create**.<br/>
        --resource-group :- Enter your **Resource Group** name.
  ```
-az network lb rule create --resource-group ODL-Linux-XXXX --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
+az network lb rule create --resource-group ODL-linux-XXXX --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
   ```
   
   <img src="images/loadbalncer.png "/><br/>
@@ -54,7 +54,7 @@ az network lb rule create --resource-group ODL-Linux-XXXX --name myLoadBalancerR
      --resource-group :- Enter your **Resource Group** name.
      --name :- Your **Scale Set** name.
   ```
-az vmss list-instances --resource-group ODL-Linux-XXXX --name ScaleSetname --output table 
+az vmss list-instances --resource-group ODL-linux-XXXX --name ScaleSetname --output table 
   ```
   
    <img src="images/instance.png"/><br/>
@@ -64,7 +64,7 @@ az vmss list-instances --resource-group ODL-Linux-XXXX --name ScaleSetname --out
   --resource-group :- Enter your **Resource Group** name.
   --name :- Your **Scale Set** name.
   ```
-  az network public-ip show --resource-group ODL-Linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
+  az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
     
   ``` 
    
