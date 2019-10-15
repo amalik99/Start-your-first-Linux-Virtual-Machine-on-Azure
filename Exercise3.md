@@ -18,7 +18,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **3.2 Create an app to scale** <br/>
 
-1. We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You              can download that custom file using below command:-
+1. We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You              can download that custom file using below command:- <br/>
 
 Run On Azure Cloud Shell<br/>
 ```
@@ -30,11 +30,11 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 
 **3.3 Create a scale set** <br/>
 
-1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load                     balancer, Loadbalancing rules, Backend pools etc.. 
-       Please provide the following values while running the below command :<br/>
-         - resource-group :- Enter your **Resource Group** name.<br/>
-         - name :- Enter **Scale Set** name.<br/>
-         - admin-username :- **azureuser**.<br/>
+1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load                     balancer, Loadbalancing rules, Backend pools etc.. <br/>
+      - Please provide the following values while running the below command :<br/>
+         - resource-group :- Enter your **Resource Group** name.
+         - name :- Enter **Scale Set** name.
+         - admin-username :- **azureuser**.
 
 ```
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
