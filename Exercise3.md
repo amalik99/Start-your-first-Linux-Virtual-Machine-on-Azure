@@ -14,7 +14,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 2. Select **BASH** from drop down in cloud shell window.<br/>
 
-3. Used your existing storage account which we provisioned in **Exercise 2**.
+3. Used your existing bash storage account which we provisioned in **Exercise 2**.
 
 
 **3.2 Create an app to scale** <br/>
