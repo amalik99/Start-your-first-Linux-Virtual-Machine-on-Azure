@@ -8,7 +8,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 3. You will see the **Environment Details** soon. Use that deatils for login into the azure portal.<br/>
 
-     <img src="images/azurelogincredentials.png "/><br/>
+  <img src="images/azurelogincredentials.png "/><br/>
   
  **login to Azure Portal** 
 
@@ -17,3 +17,5 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 2 . **Enter** the **Username** and **click** on **Next**.<br/>
 
 3 .	In the Stay signed in? pop-up window, click **No**. **Enter** the **Password** and click on **Sign in**.<br/>
+
+   <img src="images/fpage.png "/><br/>
