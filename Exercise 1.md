@@ -31,6 +31,6 @@
       
  8. After sometime you can see that your virtual machine successfully deployed.  
  
-     <img src="images/overview.png"/><br
+     <img src="images/overview.png"/><br>
       
 
