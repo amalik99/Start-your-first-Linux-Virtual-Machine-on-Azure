@@ -57,7 +57,7 @@ az network lb rule create --resource-group myResourceGroupScaleSet --name myLoad
 az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSet --output table 
   ```
   
-   <img src="images/instances.png"/><br/>
+   <img src="images/instance.png"/><br/>
    
    
 6.To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show**.
