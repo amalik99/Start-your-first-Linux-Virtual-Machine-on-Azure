@@ -74,3 +74,6 @@ az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSe
   5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
      <img src="images/output.png"/><br/>
+     
+     
+    ------------------------------------------------------------------
