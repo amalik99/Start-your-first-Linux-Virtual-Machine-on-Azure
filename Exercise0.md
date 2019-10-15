@@ -1,4 +1,5 @@
-### Exercise 0: Log into your Azure Portal and Verify access to the Subscription
+Exercise 0: Log into your Azure Portal and Verify access to the Subscription
+----------------------------------------------------------------------------
 
 In this exercise, you will log into the **Azure Portal** using your Azure credentials and you will verify the type of role you are assigned in this Subscription.
 
