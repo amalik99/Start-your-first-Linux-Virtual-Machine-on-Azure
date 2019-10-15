@@ -1,4 +1,5 @@
-### Exercise 1: Create your first Linux VM
+ Exercise 1: Create your first Linux VM
+ --------------------------------------
 
 
 **Create Ubuntu VM using Portal**
