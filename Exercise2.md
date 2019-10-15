@@ -1,6 +1,8 @@
 Exercise 2: Work with CloudShell
 ----------------------------------
 
+1.1 **Launch Cloud Shell**
+
 1. Select the **Cloud Shell** from the upper right corner of the Azure Portal. 
 
    <img src="images/azureclisign.png"/><br/>
@@ -13,7 +15,7 @@ Exercise 2: Work with CloudShell
 
    <img src="images/bashst.png"/><br/>
  
- **Get Public IP of VM using az cli**
+ 1.2 **Get Public IP of VM using az cli**
  
  Run following command to get **Public IP** of your virtual machine.<br/>
   - -g :- Enter you **Resource Group** name.<br/>
@@ -24,9 +26,9 @@ Exercise 2: Work with CloudShell
   az vm show -d -g ODL-linux-XXXX -n VMname --query publicIps -o tsv
   ```
       
-**SSH to VM using Public IP**
+1.3 **SSH to VM using Public IP**
 
-Run below command to take **SSH** of your virtual machine.
+1. Run below command to take **SSH** of your virtual machine.
    X.X.X.X :- Enter your **Public IP**
 
   ```
@@ -35,10 +37,10 @@ Run below command to take **SSH** of your virtual machine.
   ```
    <img src="images/ssh.png"/><br/>
    
-**Perform basic operation inside VM**
+ 1.4 Perform basic operation inside VM**
 
-  <img src="images/task.png"/><br/>
-  
+   <img src="images/task.png"/><br/>
+   
   
 ---------------------------------------------------------------
  
