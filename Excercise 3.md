@@ -8,11 +8,16 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **Launch Cloud Shell**
 
+1. Select this sign **">_"** .<br/>
+
+   <img src="images/azureclisign.png"/><br/>
+
+2. Select **BASH** in cloud shell window.<br/>
 
 
 **Create an app to scale** <br/>
 
-We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application .You can download that custom file using below command:-
+ We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application .You can download that custom file using below command:-
 
 Run On Azure Cloud Shell<br/>
 ```
