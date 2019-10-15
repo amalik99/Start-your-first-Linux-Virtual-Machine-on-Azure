@@ -8,7 +8,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **Launch Cloud Shell**
 
-1. Select this sign **">_"** .<br/>
+1. Select the Cloud Shell from the upper right corner of the Azure Portal. .<br/>
 
    <img src="images/azureclisign.png"/><br/>
 
