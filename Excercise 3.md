@@ -1,4 +1,4 @@
-### Exercise 4: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
+### Exercise 3: Deploy VM Scale Set
 
 A **Virtual Machine Scale Set** allows you to deploy and manage a set of identical, auto-scaling virtual machines. You can scale the number of VMs in the scale set manually, or define rules to autoscale based on resource usage such as CPU, memory demand, or network traffic. In this exercise, you deploy a virtual machine scale set in Azure. You learn how to:<br/>
 
@@ -6,14 +6,17 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 - Create a **Virtual Machine Scale Set**<br/>
 - Increase or decrease the number of instances in a scale set<br/>
 
+**Launch Cloud Shell**
+
+
 
 **Create an app to scale** <br/>
 
-For production use, we have already created a custom VM image that includes pre-installed application .You can download that custom file using below command:-
+We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application .You can download that custom file using below command:-
 
 Run On Azure Cloud Shell<br/>
 ```
-wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/coustomscript.txt
+wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/cloud-init.yaml
 ```
 
 <img src="images/githubscript.png"/><br/>
@@ -27,8 +30,9 @@ wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/star
      --admin-username :- Enter **Admin User** name.
 
 ```
-az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data coustomscript.txt --admin-username azureuser --generate-ssh-keys
-```
+az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
+``
+
    <img src="images/scalsetscreenshot.png"/><br/>
   
   2. To allow traffic to reach the web app, create a rule with **az network lb rule create**.<br/>
@@ -36,6 +40,8 @@ az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --imag
  ```
 az network lb rule create --resource-group myResourceGroupScaleSet --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
   ```
+  
+ 
    <img src="images/Loadbalancerrule1.png"/><br/>
   
   
