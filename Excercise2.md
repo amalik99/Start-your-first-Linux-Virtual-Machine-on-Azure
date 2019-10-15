@@ -38,5 +38,5 @@ Run below command to take **SSH** of your virtual machine.
 
   <img src="images/task.png"/><br/>
   
-  
+----------------------------------------  
  
