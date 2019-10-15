@@ -20,7 +20,7 @@
 
   
   ```
-  az vm show -d -g ODL-Linux-XXXX -n VMname --query publicIps -o tsv
+  az vm show -d -g ODL-linux-XXXX -n VMname --query publicIps -o tsv
   ```
       
 **SSH to VM using Public IP**
