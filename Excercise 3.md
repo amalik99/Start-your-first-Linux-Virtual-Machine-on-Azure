@@ -33,10 +33,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
 ```
 
-   <img src="images/scalsetscreenshot.png"/><br/>   
-   
-   
-   <img src="images/scalsetscreenshot.png"/><br/>
+   <img src="images/vmss.png "/><br/>   
 
   
   2. To allow traffic to reach the web app, create a rule with **az network lb rule create**.<br/>
@@ -45,13 +42,8 @@ az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --imag
 az network lb rule create --resource-group myResourceGroupScaleSet --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
   ```
   
- 
-   <img src="images/Loadbalancerrule1.png"/><br/>
+  <img src="images/loadbalncer.png "/><br/>
    
- 
-   <img src="images/scalsetscreenshot.png"/><br/>
-
-  
   
   4. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
      --resource-group :- Enter your **Resource Group** name.
@@ -60,7 +52,7 @@ az network lb rule create --resource-group myResourceGroupScaleSet --name myLoad
 az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSet --output table 
   ```
   
-   <img src="images/runninginstances.png"/><br/>
+   <img src="images/instances.png"/><br/>
    
    
 6.To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show**.
@@ -69,7 +61,11 @@ az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSe
   ```
   az network public-ip show --resource-group myResourceGroupScaleSet --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
     
-   ``` 
+  ``` 
+   
+   <img src="images/publicipdisplay.png"/><br/
+   
+   
   5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
-    <img src="images/output.png"/><br/>
+     <img src="images/output.png"/><br/>
