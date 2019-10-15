@@ -11,7 +11,7 @@ Exercise 2: Work with CloudShell
 
 3. Select **Show Advance Setting**.<br/>
 
-4. Create a storage accounr for Bash, provide unique name for **Storage Account** and **File share** and then click on **Create Storage**.<br/>
+4. Create a storage accounr for Bash, provide unique name for **Storage Account**, **File share** and then click on **Create Storage**.<br/>
 
    <img src="images/bashst.png"/><br/>
  
@@ -28,7 +28,7 @@ Exercise 2: Work with CloudShell
       
 **2.3 SSH to VM using Public IP**
 
-1. Run below command to take **SSH** of your virtual machine.
+1. Run below command to take **SSH** of your virtual machine.<br/>
     - x.x.x.x :- Replace this with your virtual machine **Public IP**.
 
   ```
