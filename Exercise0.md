@@ -20,3 +20,6 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 3 .	In the Stay signed in? pop-up window, click **No**. **Enter** the **Password** and click on **Sign in**.<br/>
 
    <img src="images/fpage.png "/><br/>
+   
+   
+   ---------------------------------------------------------------------------------------------------------------
