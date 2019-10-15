@@ -2,7 +2,7 @@
  --------------------------------------
 
 
-1.1 **Create Ubuntu VM from Azure Portal**
+**1.1 Create Ubuntu VM from Azure Portal**
 
 1. Click on **Create a resource** in the upper left corner of the Azure portal and select **Ubuntu Server 18.04 LTS**.<br/>
 
