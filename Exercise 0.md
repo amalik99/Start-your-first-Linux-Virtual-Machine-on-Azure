@@ -6,7 +6,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 2. Once registration is accepted, you will be automatically redirected to the lab activation page. Now, it is advised to save a copy of the URL on the browser, which has the activation id. **Click** on the **Launch Lab** button.<br/>
 
-3. You will see the environment details soon. Use that deatils for login into the azure portal.<br/>
+3. You will see the **Environment Details** soon. Use that deatils for login into the azure portal.<br/>
 
      <img src="images/azurelogincredentials.png "/><br/>
   
