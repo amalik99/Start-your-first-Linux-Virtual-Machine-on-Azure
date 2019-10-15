@@ -47,7 +47,7 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
  
     <img src="images/LBname.png "/><br/>
     
- 2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
+ 3.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
       - Please provide the following values for running the below command :<br/>
       
          - resource-group   :- Enter your **Resource Group** name.
@@ -63,7 +63,7 @@ az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalance
    <img src="images/loadbalncer.png "/><br/>
    
   
-3. To view a list of VMs running in your scale set, use **az vmss list-instances** command.<br/>
+4. To view a list of VMs running in your scale set, use **az vmss list-instances** command.<br/>
      - Please provide the following values while running the below command :<br/>
          - resource-group :- Enter your **Resource Group** name.<br/>
          - name :- Your **Scale Set** name.<br/>
@@ -74,7 +74,7 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
    <img src="images/instance.png"/><br/>
    
    
-4. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.<br/>
+5. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.<br/>
       - Please provide the following values while running the below command :<br/>
           - resource-group :- Enter your **Resource Group** name.<br/>
            - name :- Your **Scale Set** name.<br/>
@@ -85,7 +85,7 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
    <img src="images/publicipdisplay.png"/><br/>
    
    
-5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
+6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
     <img src="images/output.png"/><br/>
      
