@@ -1,6 +1,6 @@
 ## Exercise 2:- Work with CloudShell
 
-1. Select this sign **">_"** .<br/>
+1. Select the **Cloud Shell** from the upper right corner of the Azure Portal. 
 
    <img src="images/azureclisign.png"/><br/>
 
