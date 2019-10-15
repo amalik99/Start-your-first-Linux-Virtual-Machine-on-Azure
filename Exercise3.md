@@ -7,7 +7,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 - Create a **Virtual Machine Scale Set**<br/>
 - Increase or decrease the number of instances in a scale set<br/>
 
-**Launch Cloud Shell**
+3.1 **Launch Cloud Shell**
 
 1. Select the **Cloud Shell** icon from the upper right corner of the Azure Portal. .<br/>
 
@@ -16,7 +16,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 2. Select **BASH** from drop down in cloud shell window.<br/>
 
 
-**Create an app to scale** <br/>
+3.2 **Create an app to scale** <br/>
 
 We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. You can download that custom file using below command:-
 
@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 <img src="images/wgetp.png "/><br/>
 
 
-**Create a scale set** <br/>
+3.3 **Create a scale set** <br/>
 
 1. Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load balancer, Loadbalancing rules, Backend pools etc.. 
 Please provide the following values while running the below command :
