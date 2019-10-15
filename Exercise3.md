@@ -31,9 +31,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 **3.3 Create a Scale Set** <br/>
 
 1.  Create a virtual machine scale set using **az vmss create** command. This will automatically deploy required resorces such as a         Pulic IP, Loadbalancer, Loadbalancing rules, Backend Pools, etc. <br/>
-      - Please provide the following values while running the below command :<br/>
-        
-     <img src="images/LBname.png"/><br/>
+
    
          - resource-group :- Enter your **Resource Group** name.
          - name :- Enter **Scale Set** name.
@@ -43,16 +41,19 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
 ```
 
-   <img src="images/vmss.png "/><br/>   
+   <mg src="images/vmss.png "/><br/>   
 
-  
+ 2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of  **Load Balancer** and **Backend Pools** for next step.<br/>
+ 
+    <img src="images/LBname.png "/><br/>
+    
  2.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
-      - Please navigate to your resorce group and provide the following values while running the below command :<br/>
+      - Please provide the following values for running the below command :<br/>
       
          - resource-group   :- Enter your **Resource Group** name.
          - name             :- Enter name for **Load Balancer Rule**.
-         - lb-name          :- Enter your **Load Balancer** name.
-         - backend-pool     :- Enter your **Backend Pool** name.
+         - lb-name          :- Enter your **Load Balancer** name that you copied in previous step.
+         - backend-pool     :- Enter your **Backend Pool** name that you copied in previous step.
           
      
  ```
