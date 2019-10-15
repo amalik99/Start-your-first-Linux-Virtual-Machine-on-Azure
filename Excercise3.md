@@ -76,4 +76,4 @@ az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSe
      <img src="images/output.png"/><br/>
      
      
-    ------------------------------------------------------------------
+--------------------------------------------------------------------
