@@ -1,5 +1,5 @@
-### Exercise 3: Deploy VM Scale Set
-
+Exercise 3: Deploy VM Scale Set
+-------------------------------
 A **Virtual Machine Scale Set** allows you to deploy and manage a set of identical, auto-scaling virtual machines. You can scale the number of VMs in the scale set manually, or define rules to autoscale based on resource usage such as CPU, memory demand, or network traffic. In this exercise, you deploy a virtual machine scale set in Azure. You learn how to:<br/>
 
 - Use **cloud-init** to create an app to scale<br/>
