@@ -30,10 +30,11 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 
 **Create a scale set** <br/>
 
-1. Create a virtual machine scale set with **az vmss create**. 
+1. Create a virtual machine scale set using **az vmss create** command. This will automatically deploy a pulic IP, Load balancer, Loadbalancing rules, Backend pools etc.. 
+Please provide the following values while running the below command :
      - resource-group :- Enter your **Resource Group** name.
      - name :- Enter **Scale Set** name.
-     - admin-username :- Enter **Admin User** name.
+     - admin-username :- **azureuser**.
 
 ```
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
@@ -42,11 +43,11 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
    <img src="images/vmss.png "/><br/>   
 
   
-  2. To allow traffic to reach the web app, create a rule with **az network lb rule create**.<br/>
+  2. To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Navigate to your resource group and provide the values for Load balancer name, Backend pool name and Front-end Ip in the below command. 
        - resource-group :- Enter your **Resource Group** name.
      
  ```
-az network lb rule create --resource-group ODL-linux-XXXX --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
+az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name <loadBalancerFrontEndip>  --frontend-port 80  --protocol tcp
   ```
   
   <img src="images/loadbalncer.png "/><br/>
@@ -56,7 +57,7 @@ az network lb rule create --resource-group ODL-linux-XXXX --name myLoadBalancerR
      - resource-group :- Enter your **Resource Group** name.
      - name :- Your **Scale Set** name.
   ```
-az vmss list-instances --resource-group ODL-linux-XXXX --name ScaleSetname --output table 
+az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --output table 
   ```
   
    <img src="images/instance.png"/><br/>
