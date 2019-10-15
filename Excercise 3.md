@@ -33,7 +33,11 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
 ```
 
+   <img src="images/scalsetscreenshot.png"/><br/>   
+   
+   
    <img src="images/scalsetscreenshot.png"/><br/>
+
   
   2. To allow traffic to reach the web app, create a rule with **az network lb rule create**.<br/>
        --resource-group :- Enter your **Resource Group** name.
@@ -43,6 +47,10 @@ az network lb rule create --resource-group myResourceGroupScaleSet --name myLoad
   
  
    <img src="images/Loadbalancerrule1.png"/><br/>
+   
+ 
+   <img src="images/scalsetscreenshot.png"/><br/>
+
   
   
   4. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
