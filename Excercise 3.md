@@ -50,7 +50,7 @@ az network lb rule create --resource-group myResourceGroupScaleSet --name myLoad
   <img src="images/loadbalncer.png "/><br/>
    
   
-  4. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
+  3. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
      --resource-group :- Enter your **Resource Group** name.
      --name :- Your **Scale Set** name.
   ```
@@ -60,7 +60,7 @@ az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSe
    <img src="images/instance.png"/><br/>
    
    
-6.To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show**.
+4.To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show**.
   --resource-group :- Enter your **Resource Group** name.
   --name :- Your **Scale Set** name.
   ```
