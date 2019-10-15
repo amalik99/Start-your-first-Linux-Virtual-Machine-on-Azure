@@ -29,6 +29,7 @@ Exercise 2: Work with CloudShell
 **2.3 SSH to VM using Public IP**
 
 1. Run below command to take **SSH** of your virtual machine.
+
    - x.x.x.x :- Replace this with your virtual machine **Public IP**.
 
   ```
