@@ -14,9 +14,9 @@
  
  **Get Public IP of VM using az cli command**
  
- Run this command for see **Public IP** of your virtual machine<br/>.
-  -g :- Enter you **Resource Group** name.
-  -n :- Enter  your **Virtual Machine** name.
+ Run this command for see **Public IP** of your virtual machine.<br/>
+  - -g :- Enter you **Resource Group** name.<br/>
+  - -n :- Enter  your **Virtual Machine** name.<br/>
 
   
   ```
