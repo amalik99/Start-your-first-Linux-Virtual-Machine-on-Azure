@@ -29,7 +29,7 @@ ssh azureuser@x.x.x.x
 
 ### 2.4 Perform Basic Operation Inside Virtual Machine
 
- <img src="images/task.png"/><br/>
+<img src="images/task.png"/><br/>
 
 ### 2.5 Access Serial Console of Virtual Machine
 
