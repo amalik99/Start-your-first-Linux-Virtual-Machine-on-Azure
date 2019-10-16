@@ -12,7 +12,6 @@
 1. Run following command to get **Public IP** of your virtual machine.<br/>
   * g :- Enter you **Resource Group** name.<br/>
   * n :- Enter  your **Virtual Machine** name.<br/>
-
 ``
 az vm show -d -g ODL-linux-XXXX -n VMname --query publicIps -o tsv
 ``
@@ -26,7 +25,6 @@ ssh azureuser@x.x.x.x
 <img src="images/ssh.png"/><br/>
 
 ### 2.4 Perform Basic Operation Inside Virtual Machine
-
 <img src="images/task.png"/><br/>
 
 ### 2.5 Access Serial Console of Virtual Machine
