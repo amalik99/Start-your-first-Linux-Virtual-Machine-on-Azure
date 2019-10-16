@@ -37,15 +37,14 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
          - name :- Enter **Scale Set** name.
          - admin-username :- Enter **Admin User** name.
 
-```
-az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
-```
+   ```
+   az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
+   ```
 
-   <mg src="images/vmss.png "/><br/>   
+      <mg src="images/vmss.png "/><br/>   
 
 2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of  **Load Balancer** and **Backend Pools** for next step.<br/>
- 
-    <img src="images/LBname.png "/><br/>
+   <img src="images/LBname.png "/><br/>
     
 3. To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
       - Please provide the following values for running the below command :<br/>
@@ -56,10 +55,10 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
          - backend-pool     :- Enter your **Backend Pool** name that you copied in previous step.
           
      
- ```
-az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd --frontend-port 80  --protocol tcp
-  ```
-  
+    ```
+   az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb  --lb-name <loadbalancer-name>  --backend-pool-name <Backend-pool-Name>  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd --frontend-port 80  --protocol tcp
+     ```
+
    <img src="images/loadbalncer.png "/><br/>
    
   
@@ -67,10 +66,10 @@ az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalance
      - Please provide the following values while running the below command :<br/>
          - resource-group :- Enter your **Resource Group** name.<br/>
          - name :- Your **Scale Set** name.<br/>
-  ```
-az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --output table 
-  ```
-  
+     ```
+   az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --output table 
+     ```
+
    <img src="images/instance.png"/><br/>
    
    
@@ -78,16 +77,16 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
       - Please provide the following values while running the below command :<br/>
           - resource-group :- Enter your **Resource Group** name.<br/>
            - name :- Your **Scale Set** name.<br/>
-  ```
-  az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
-  ``` 
-   
-   <img src="images/publicipdisplay.png"/><br/>
+     ```
+     az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
+     ``` 
+
+      <img src="images/publicipdisplay.png"/><br/>
    
    
 6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
-    <img src="images/output.png"/><br/>
+   <img src="images/output.png"/><br/>
      
      
 --------------------------------------------------------------------
