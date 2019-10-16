@@ -28,10 +28,10 @@
 
 7. On the Create a **Virtual Machine Page**, you can see the details about the VM you are about to create. When you are ready, select        **Create**.<br/>
  
-      <img src="images/validation.png"/><br>
+      <img src="images/validation.png"/><br/>
       
-8. After sometime you can see that your virtual machine successfully deployed.  
+8. After sometime you can see that your virtual machine successfully deployed.
  
-     <img src="images/overview.png"/><br>
+ <img src="images/overview.png"/><br>
       
 --------------------------------------------------------------------------------------------------
