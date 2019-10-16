@@ -25,11 +25,10 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
  * resource-group :- Enter your **Resource Group** name.</br>
  * name :- Enter **Scale Set** name.</br>
  * admin-username :- Enter **Admin User** name.</br>
-```
+``
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
-```
+``
 <mg src="images/vmss.png "/><br/>
-
 2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of **Load Balancer** and **Backend Pools** for next step.<br/>
 <img src="images/LBname.png "/><br/>
 3. To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Please provide the following values for running the below command :<br/>
@@ -37,9 +36,9 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
  * name  :- Enter name for **Load Balancer Rule**.<br/>
  * lb-name :- Enter your **Load Balancer** name that you copied in previous step.<br/>
  * backend-pool :- Enter your **Backend Pool** name that you copied in previous step.<br/>
-```
+``
 az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb --lb-name <loadbalancer-name> --backend-pool-name <Backend-pool-Name> --backend-port 80 --frontend-ip-name loadBalancerFrontEnd --frontend-port 80 --protocol tcp
-```
+``
 <img src="images/loadbalncer.png "/><br/>
 
 4. To view a list of VMs running in your scale set, use **az vmss list-instances** command. Please provide the following values while running the below command:<br/>
@@ -52,9 +51,9 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
 5. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.  Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * name :- Your **Scale Set** name.<br/>
-```
+``
 az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
-```
+``
 <img src="images/publicipdisplay.png"/><br/>
 
 6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to <br/>
