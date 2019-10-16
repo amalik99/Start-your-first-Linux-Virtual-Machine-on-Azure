@@ -25,6 +25,7 @@ az vm show -d -g ODL-linux-XXXX -n VMname --query publicIps -o tsv
 ``
 ssh azureuser@x.x.x.x
 ``
+
 <img src="images/ssh.png"/><br/>
 
 ### 2.4 Perform Basic Operation Inside Virtual Machine
