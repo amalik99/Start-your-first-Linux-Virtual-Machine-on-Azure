@@ -19,7 +19,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **3.2 Create an App to Scale** <br/>
 
-1. We have already created a custom script that includes pre-installed **Nagix Server** with **index.js** web application. Copy the below command and paste in cloud shell for downloading the custom file:<br/>
+1. We have already created a custom script that includes pre-installed **Nginx Server** with **index.js** web application. Copy the below command and paste in cloud shell for downloading the custom file:<br/>
 
 ```
 wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/cloud-init.yaml
