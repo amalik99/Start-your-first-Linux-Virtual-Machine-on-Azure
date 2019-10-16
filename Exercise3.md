@@ -62,7 +62,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
    <img src="images/loadbalncer.png "/><br/>
    
   
-4. To view a list of VMs running in your scale set, use **az vmss list-instances** command.<br/>
+1. To view a list of VMs running in your scale set, use **az vmss list-instances** command.<br/>
      - Please provide the following values while running the below command :<br/>
          - resource-group :- Enter your **Resource Group** name.<br/>
          - name :- Your **Scale Set** name.<br/>
@@ -73,18 +73,19 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
    <img src="images/instance.png"/><br/>
    
    
- 5.   To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.<br/>
+ 1.   To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.<br/>
       - Please provide the following values while running the below command :<br/>
           - resource-group :- Enter your **Resource Group** name.<br/>
            - name :- Your **Scale Set** name.<br/>
-     ```
+ ```
      az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
-     ``` 
+     
+ ``` 
 
-      <img src="images/publicipdisplay.png"/><br/>
+  <img src="images/publicipdisplay.png"/><br/>
+    
    
-   
-6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
+1. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
    <img src="images/output.png"/><br/>
      
