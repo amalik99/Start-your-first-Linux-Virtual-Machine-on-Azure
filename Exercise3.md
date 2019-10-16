@@ -56,5 +56,5 @@ az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPub
 ``
 <img src="images/publicipdisplay.png"/><br/>
 
-6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to <br/>
+6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to.<br/>
 <img src="images/output.png"/><br/>
