@@ -57,7 +57,7 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
 ``
 az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPublicIP  --query [ipAddress]  --output tsv
 ``
-<img src="images/publicipdisplay.png"/><br/>
 
+<img src="images/publicipdisplay.png"/><br/>
 6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to.<br/>
 <img src="images/output.png"/><br/>
