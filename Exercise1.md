@@ -8,7 +8,7 @@
 <img src="images/suscription.png"/><br/>
 3. Under **Instance details**, type **Virtual Machine Name** , choose your **Region**, select **Ubuntu Server 18.04 LTS or Ubuntu Server   16.04 LTS** image and select the virtual machine **size** from the following:<br/>
 ``
-**"Standard_DS2_v2", "Standard_DS1_v2", "Standard_B1ls1", "Standard_B1s", "Standard_B1ms", "Standard_B2s", "Standard_B2ms", "Standard_B4ms", "Standard_B8ms", "Standard_E16-4s_v3", "Standard_E2s_v3", "Standard_E4-2s_v3", "Standard_E4s_v3", "Standard_E8-2s_v3", "Standard_E8-4s_v3", "E16-4s_v3", "E16-8s_v3"**.
+"Standard_DS2_v2", "Standard_DS1_v2", "Standard_B1ls1", "Standard_B1s", "Standard_B1ms", "Standard_B2s", "Standard_B2ms", "Standard_B4ms", "Standard_B8ms", "Standard_E16-4s_v3", "Standard_E2s_v3", "Standard_E4-2s_v3", "Standard_E4s_v3", "Standard_E8-2s_v3", "Standard_E8-4s_v3", "E16-4s_v3", "E16-8s_v3".
 ``
 <img src="images/vmname.png"/><br/>
 4. Under **Administrator account** select **Password** for authentication type. Provide **User Name** and **Password**.<br/>
