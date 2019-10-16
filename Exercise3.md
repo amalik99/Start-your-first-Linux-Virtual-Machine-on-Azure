@@ -12,9 +12,9 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
    <img src="images/azureclisign.png"/><br/>
 
-2. Select **BASH** from drop down in cloud shell window.<br/>
+1. Select **BASH** from drop down in cloud shell window.<br/>
 
-3. Use your existing bash storage account which we provisioned in **Exercise 2**.
+1. Use your existing bash storage account which we provisioned in **Exercise 2**.
 
 
 **3.2 Create an App to Scale** <br/>
@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 
       <mg src="images/vmss.png "/><br/>   
 
-2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of  **Load Balancer** and **Backend Pools** for next step.<br/>
+1. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of  **Load Balancer** and **Backend Pools** for next step.<br/>
    <img src="images/LBname.png "/><br/>
     
 3. To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
