@@ -44,7 +44,7 @@ Exercise 2: Work with CloudShell
  
 **2.5 Access Serial Console of Vm**
 
-For using serial console of Ubuntu virtual machine navigate to the Resource Group -> Virtual Machine -> Overview -> Support and Trubleshoot -> Serial Console
+For using serial console of Ubuntu virtual machine navigate to the **Resource Group->Virtual Machine->Overview->Support and Trubleshoot-> Serial Console**.
  
    
    <img src="images/serialconsole.png "/><br/>
