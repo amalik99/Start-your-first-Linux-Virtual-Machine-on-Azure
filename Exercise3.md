@@ -30,11 +30,9 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
 ``
 
-<mg src="images/vmss.png "/><br/>
-
+<img src="images/vmss.png "/><br/>
 2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of **Load Balancer** and **Backend Pools** for next step.<br/>
 <img src="images/LBname.png "/><br/>
-
 3. To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Please provide the following values for running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * name  :- Enter name for **Load Balancer Rule**.<br/>
@@ -45,7 +43,6 @@ az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalance
 ``
 
 <img src="images/loadbalncer.png "/><br/>
-
 4. To view a list of VMs running in your scale set, use **az vmss list-instances** command. Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * name :- Your **Scale Set** name.<br/>
@@ -54,7 +51,6 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
 ``
 
 <img src="images/instance.png"/><br/>
-
 5. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.  Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * name :- Your **Scale Set** name.<br/>
