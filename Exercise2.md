@@ -24,8 +24,7 @@ az vm show -d -g ODL-linux-XXXX -n VMname --query publicIps -o tsv
   * x.x.x.x :- Replace this with your virtual machine **Public IP**.<br/>
 ``
 ssh azureuser@x.x.x.x
-``
-
+``<br/>
 <img src="images/ssh.png"/><br/>
 
 ### 2.4 Perform Basic Operation Inside Virtual Machine
