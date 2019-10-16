@@ -43,11 +43,11 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
 
    <mg src="images/vmss.png "/><br/>   
 
- 2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of  **Load Balancer** and **Backend Pools** for next step.<br/>
+2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of  **Load Balancer** and **Backend Pools** for next step.<br/>
  
     <img src="images/LBname.png "/><br/>
     
- 3.  To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
+3. To allow traffic to reach the web app, create a rule with **az network lb rule create** command. <br/>
       - Please provide the following values for running the below command :<br/>
       
          - resource-group   :- Enter your **Resource Group** name.
@@ -74,7 +74,7 @@ az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --o
    <img src="images/instance.png"/><br/>
    
    
-5. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.<br/>
+ 5.   To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.<br/>
       - Please provide the following values while running the below command :<br/>
           - resource-group :- Enter your **Resource Group** name.<br/>
            - name :- Your **Scale Set** name.<br/>
