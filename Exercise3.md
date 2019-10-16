@@ -8,6 +8,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 1. Select the **Cloud Shell** icon from the upper right corner of the Azure Portal.<br/>
 <img src="images/azureclisign.png"/><br/>
+
 2. Select **BASH** from drop down in cloud shell window.<br/>
 3. Use your existing bash storage account which we provisioned in **Exercise 2**.<br/>
 
@@ -16,7 +17,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 1. We have already created a custom script that includes pre-installed **Nginx Server** with **index.js** web application. Copy the below command and paste in cloud shell for downloading the custom file:<br/>
 ``
 wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/cloud-init.yaml
-``<br/>
+``
 <img src="images/wgetp.png "/><br/>
 
 #### 3.3 Create a Scale Set
@@ -27,10 +28,12 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
  * admin-username :- Enter **Admin User** name.</br>
 ``
 az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
-``<br/>
+``
 <mg src="images/vmss.png "/><br/>
+
 2. Navigate to **Azure portal** go to **Resourse Group->Load Balancer**. Copy the name of **Load Balancer** and **Backend Pools** for next step.<br/>
 <img src="images/LBname.png "/><br/>
+
 3. To allow traffic to reach the web app, create a rule with **az network lb rule create** command. Please provide the following values for running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * name  :- Enter name for **Load Balancer Rule**.<br/>
@@ -46,8 +49,9 @@ az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalance
  * name :- Your **Scale Set** name.<br/>
 ``
 az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --output table
-``<br/>
+``
 <img src="images/instance.png"/><br/>
+
 5. To see your Node.js app on the web, obtain the public IP address of your load balancer with **az network public-ip show** command.  Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * name :- Your **Scale Set** name.<br/>
