@@ -41,6 +41,13 @@ Exercise 2: Work with CloudShell
  **2.4 Perform basic operation inside VM**
 
    <img src="images/task.png"/><br/>
+ 
+**2.5 Access Serial Console of Vm**
+
+For using serial console of Ubuntu virtual machine navigate to the Resource Group -> Virtual Machine -> Overview -> Support and Trubleshoot -> Serial Console
+ 
+   <img src="images/serial console.png "/><br/>
+
    
   
 ---------------------------------------------------------------
