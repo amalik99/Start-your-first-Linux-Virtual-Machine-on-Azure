@@ -1,6 +1,4 @@
-Exercise 2: Work with CloudShell
-----------------------------------
-
+# Exercise 2: Work with CloudShell
 **2.1 Launch Cloud Shell**
 
 1. Select the **Cloud Shell** from the upper right corner of the Azure Portal. 
