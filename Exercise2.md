@@ -13,16 +13,16 @@
   * g :- Enter you **Resource Group** name.<br/>
   * n :- Enter  your **Virtual Machine** name.<br/>
 
-```
+``
 az vm show -d -g ODL-linux-XXXX -n VMname --query publicIps -o tsv
-```
+``
 
 ### 2.3 SSH to VM using Public IP
 1. Run below command to take **SSH** of your virtual machine.<br/>
   * x.x.x.x :- Replace this with your virtual machine **Public IP**.<br/>
-```
+``
 ssh azureuser@x.x.x.x
-```
+``
 <img src="images/ssh.png"/><br/>
 
 ### 2.4 Perform Basic Operation Inside Virtual Machine
