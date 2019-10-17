@@ -96,7 +96,7 @@ az monitor autoscale rule create --resource-group ODL-linux-XXXX --autoscale-nam
 ``
 <img src="images/autoscale4.png"/><br/>
 2.SSH to your first VM instance. Specify your own public IP address and port number with the -p parameter, as shown from the below command:<br/>
- * X.X.X.X :- Enter your **Public IP**
+ * X.X.X.X :- Enter your **Public IP**<br/>
 ``ssh azureuser@X.X.X.X -p 50000
 ``
 <img src="images/autoscale5.png"/><br/>
@@ -115,7 +115,8 @@ sudo stress --cpu 10 --timeout 420 &
 exit
 ``
 6. Connect to second VM instance with the port number listed from the previous **az vmss list-instance-connection-info**:<br/>
-``ssh azureuser@13.92.224.66 -p 50002
+ * X.X.X.X :- Enter your **Public IP**<br/>
+``ssh azureuser@X.X.X.X -p 50002
 ``
 <img src="images/autoscale9.png"/><br/>
 7.Install and run stress, then start ten workers on this second VM instance.<br/>
