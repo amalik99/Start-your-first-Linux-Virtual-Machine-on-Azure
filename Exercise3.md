@@ -27,7 +27,7 @@ wget https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Vir
  * name :- Enter **Scale Set** name.</br>
  * admin-username :- Enter **Admin User** name.</br>
 ``
-az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
+az vmss create --resource-group ODL-linux-XXXX --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.yaml --admin-username azureuser --generate-ssh-keys
 ``
 
 <img src="images/vmss.png "/><br/>
@@ -39,7 +39,7 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSetname --image Ubu
  * lb-name :- Enter your **Load Balancer** name that you copied in previous step.<br/>
  * backend-pool :- Enter your **Backend Pool** name that you copied in previous step.<br/>
 ``
-az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb --lb-name <loadbalancer-name> --backend-pool-name <Backend-pool-Name> --backend-port 80 --frontend-ip-name loadBalancerFrontEnd --frontend-port 80 --protocol tcp
+az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb --lb-name myScaleSetlb --backend-pool-name myScaleSetnameLBBEPool --backend-port 80 --frontend-ip-name loadBalancerFrontEnd --frontend-port 80 --protocol tcp
 ``
 
 <img src="images/loadbalncer.png "/><br/>
