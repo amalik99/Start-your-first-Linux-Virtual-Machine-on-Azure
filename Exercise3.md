@@ -39,7 +39,7 @@ az vmss create --resource-group ODL-linux-XXXX --name myScaleSet --image UbuntuL
  * lb-name :- Enter your **Load Balancer** name that you copied in previous step.<br/>
  * backend-pool :- Enter your **Backend Pool** name that you copied in previous step.<br/>
 ``
-az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalancerRuleWeb --lb-name myScaleSetlb --backend-pool-name myScaleSetnameLBBEPool --backend-port 80 --frontend-ip-name loadBalancerFrontEnd --frontend-port 80 --protocol tcp
+az network lb rule create --resource-group ODL-linux-XXXX --name myLoadBalancerRuleWeb --lb-name myScaleSetlb --backend-pool-name myScaleSetLBBEPool --backend-port 80 --frontend-ip-name loadBalancerFrontEnd --frontend-port 80 --protocol tcp
 ``
 
 <img src="images/loadbalncer.png "/><br/>
@@ -47,7 +47,7 @@ az network lb rule create --resource-group <ODL-linux-XXXX> --name myLoadBalance
  * resource-group :- Enter your **Resource Group** name.<br/>
  * name :- Your **Scale Set** name.<br/>
 ``
-az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSetname --output table
+az vmss list-instances --resource-group ODL-linux-XXXX --name myScaleSet --output table
 ``
 
 <img src="images/instance.png"/><br/>
@@ -69,7 +69,7 @@ az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPub
  * resource :- Enter your **ScaleSet** name.<br/>
  * -name :- Enter any **AutoScale** name.<br/>
 ``
-az monitor autoscale create --resource-group myResourceGroup --resource myScaleSet --resourcetype Microsoft.Compute/virtualMachineScaleSets --name autoscale --min-count 2 --max-count 10 --count 2
+az monitor autoscale create --resource-group myResourceGroup --resource myScaleSet --resource-type Microsoft.Compute/virtualMachineScaleSets --name autoscale --min-count 2 --max-count 10 --count 2
 ``
 2.To create a rule with az monitor autoscale rule create that increases the number of VM instances in a scale set when the average CPU load is greater than 70% over a 5-minute period use the below command. Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
