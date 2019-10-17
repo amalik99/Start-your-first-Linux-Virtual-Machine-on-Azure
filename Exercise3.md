@@ -67,7 +67,7 @@ az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPub
 1. To create autosacle in scaleset use **az monitor autoscale create**. Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * resource :- Enter your **ScaleSet** name.<br/>
- * -name :- Enter any **AutoScale** name.<br/>
+ * name :- Enter any **AutoScale** name.<br/>
 ``
 az monitor autoscale create --resource-group ODL-linux-XXXX --resource myScaleSet --resource-type Microsoft.Compute/virtualMachineScaleSets --name autoscale --min-count 2 --max-count 10 --count 2
 ``
@@ -78,7 +78,7 @@ az monitor autoscale create --resource-group ODL-linux-XXXX --resource myScaleSe
 ``az monitor autoscale rule create --resource-group ODL-linux-XXXX --autoscale-name autoscale --condition "Percentage CPU > 70 avg 5m" --scale out 3
 ``
 
-<img src="autoscale2.png"/><br/>
+<img src="autoscale2.png "/><br/>
 3. To Create another rule with az monitor autoscale rule create that decreases the number of VM instances in a scale set when the average CPU load then drops below 30% over a 5-minute period us below command. Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * autoscale-name :- Enter your **autoscale-name** name.<br/>
