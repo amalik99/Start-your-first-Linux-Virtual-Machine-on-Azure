@@ -77,7 +77,7 @@ az monitor autoscale create --resource-group ODL-linux-XXXX --resource myScaleSe
  * autoscale-name :- Enter your **autoscale-name** name.<br/>
 ``az monitor autoscale rule create --resource-group ODL-linux-XXXX --autoscale-name autoscale --condition "Percentage CPU > 70 avg 5m" -scale out 3
 ``
-<img src="autoscale2.png "/><br/>
+<img src="images/autoscale2.png"/><br/>
 3. To Create another rule with az monitor autoscale rule create that decreases the number of VM instances in a scale set when the average CPU load then drops below 30% over a 5-minute period us below command. Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * autoscale-name :- Enter your **autoscale-name** name.<br/>
