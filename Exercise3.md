@@ -72,7 +72,7 @@ az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPub
 az monitor autoscale create --resource-group ODL-linux-XXXX --resource myScaleSet --resource-type Microsoft.Compute/virtualMachineScaleSets --name autoscale --min-count 2 --max-count 10 --count 2
 ``
 <img src="images/autoscale1.png"/><br/>
-2.To create a rule with az monitor autoscale rule create that increases the number of VM instances in a scale set when the average CPU load is greater than 70% over a 5-minute period use the below command. Please provide the following values while running the below command:<br/>
+2. To create a rule with az monitor autoscale rule create that increases the number of VM instances in a scale set when the average CPU load is greater than 70% over a 5-minute period use the below command. Please provide the following values while running the below command:<br/>
  * resource-group :- Enter your **Resource Group** name.<br/>
  * autoscale-name :- Enter your **autoscale-name** name.<br/>
 ``
@@ -95,7 +95,7 @@ az monitor autoscale rule create --resource-group ODL-linux-XXXX --autoscale-nam
  ``az vmss list-instance-connection-info --resource-group ODL-linux-XXXX --name myScaleSet
 ``
 <img src="images/autoscale4.png"/><br/>
-2.SSH to your first VM instance. Specify your own public IP address and port number with the -p parameter, as shown from the below command:<br/>
+2. SSH to your first VM instance. Specify your own public IP address and port number with the -p parameter, as shown from the below command:<br/>
  * X.X.X.X :- Enter your **Public IP**<br/>
 ``ssh azureuser@X.X.X.X -p 50000
 ``
@@ -119,7 +119,7 @@ exit
 ``ssh azureuser@X.X.X.X -p 50002
 ``
 <img src="images/autoscale9.png"/><br/>
-7.Install and run stress, then start ten workers on this second VM instance.<br/>
+7. Install and run stress, then start ten workers on this second VM instance.<br/>
 ``sudo apt-get -y install stress
 sudo stress --cpu 10 --timeout 420 &
 ``
