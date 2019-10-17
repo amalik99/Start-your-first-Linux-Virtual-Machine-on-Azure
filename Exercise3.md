@@ -61,3 +61,33 @@ az network public-ip show --resource-group ODL-linux-XXXX --name myScaleSetLBPub
 <img src="images/publicipdisplay.png"/><br/>
 6. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to.<br/>
 <img src="images/output.png"/><br/>
+
+#### 3.4 Define an autoscale profile
+
+1. To create autosacle in scaleset use **az monitor autoscale create**. Please provide the following values while running the below command:<br/>
+ * resource-group :- Enter your **Resource Group** name.<br/>
+ * resource :- Enter your **ScaleSet** name.<br/>
+ * -name :- Enter any **AutoScale** name.<br/>
+``
+az monitor autoscale create --resource-group myResourceGroup --resource myScaleSet --resourcetype Microsoft.Compute/virtualMachineScaleSets --name autoscale --min-count 2 --max-count 10 --count 2
+``
+2.To create a rule with az monitor autoscale rule create that increases the number of VM instances in a scale set when the average CPU load is greater than 70% over a 5-minute period use the below command. Please provide the following values while running the below command:<br/>
+ * resource-group :- Enter your **Resource Group** name.<br/>
+ * autoscale-name :- Enter your **autoscale-name** name.<br/>
+``
+az monitor autoscale rule create --resource-group myResourceGroup --autoscale-name autoscale --condition "Percentage CPU > 70 avg 5m" --scale out 3
+``
+3. To Create another rule with az monitor autoscale rule create that decreases the number of VM instances in a scale set when the average CPU load then drops below 30% over a 5-minute period us below command. Please provide the following values while running the below command:<br/>
+ * resource-group :- Enter your **Resource Group** name.<br/>
+ * autoscale-name :- Enter your **autoscale-name** name.<br/>
+``
+az monitor autoscale rule create --resource-group myResourceGroup --autoscale-name autoscale --condition "Percentage CPU > 70 avg 5m" --scale out 3
+``
+#### 3.5 Generate CPU load on scale set
+
+1. To see list the address and ports to connect to VM instances in a scale set use **az vmss list-instance-connection-info**. Please provide the following values while running the below command:<br/>
+ * resource-group :- Enter your **Resource Group** name.<br/>
+ * name :- Enter your **ScaleSet** name.<br/>
+ ``az vmss list-instance-connection-info --resource-group myResourceGroup --name myScaleSet
+``
+2.
