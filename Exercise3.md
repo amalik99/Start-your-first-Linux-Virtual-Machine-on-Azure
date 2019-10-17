@@ -123,6 +123,7 @@ exit
 sudo stress --cpu 10 --timeout 420 &
 ``
 <img src="images/autoscale6.png"/><br/>
+
 <img src="images/autoscale10.png"/><br/>
 
 8. Close your connection to the second VM instance type **exit**. stress continues to run on the VM instance.<br/>
